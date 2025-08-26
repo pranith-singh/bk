@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users</title>
+</head>
+<body>
+  <h1>Users Table</h1>
+  <table border="1" cellpadding="5">
+    <tr>
+      <% if (users.length > 0) { Object.keys(users[0]).forEach(col => { %>
+        <th><%= col %></th>
+      <% }) } %>
+    </tr>
+    <% users.forEach(row => { %>
+      <tr>
+        <% Object.values(row).forEach(val => { %>
+          <td><%= val %></td>
+        <% }) %>
+      </tr>
+    <% }) %>
+  </table>
+  <br>
+  <a href="/">Back to Tables</a>
+</body>
+</html>
